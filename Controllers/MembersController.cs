@@ -171,15 +171,6 @@ namespace Corona_System.Controllers
             return View(activeCasesByDay);
         }
 
-        /*
-         // GET: Members/UnvaccinatedChart
-         public IActionResult UnvaccinatedChart()
-         {
-             var unvaccinatedCount = _context.Member.Count(m => m.Vaccine1Date == null && m.Vaccine2Date == null && m.Vaccine3Date == null && m.Vaccine4Date == null);
-
-             return View(unvaccinatedCount);
-         }*/
-
         // GET: Members/VaccinationChart
         public IActionResult VaccinationChart()
         {
