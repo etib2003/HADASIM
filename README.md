@@ -39,5 +39,5 @@ To deploy this application, follow these steps:
 
 ## Bonus
 Presentation of a summary view on the subject of the Corona virus:
-● How many active patients were there each day in the last month.
-● Distribution of members according to the amount of vaccinations they received.
+1. How many active patients were there each day in the last month.
+2. Distribution of members according to the amount of vaccinations they received.
