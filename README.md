@@ -1,4 +1,4 @@
-![image](https://github.com/etib2003/HADASIM/assets/116508181/6586a0d5-707a-49ea-b5ea-29c6ad276977)# Corona_System
+# Corona_System
 
 ## Overview
 This project is aimed at managing vaccination data for members. It includes functionalities for tracking vaccination status, updating member information, and generating charts for vaccination statistics.
