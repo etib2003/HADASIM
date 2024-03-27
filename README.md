@@ -14,7 +14,7 @@ This project is aimed at managing vaccination data for members. It includes func
 5. Start the application.
 6. Navigate to the specified URL in your browser to access the application.
 
-### Screenshots
+## Screenshots
 ![image](https://github.com/etib2003/HADASIM/assets/116508181/3011d422-c6cd-4987-ae27-d2d1686e2698)
 ![image](https://github.com/etib2003/HADASIM/assets/116508181/04bb90bb-9773-4fb9-88de-d278f946f91d)
 ![image](https://github.com/etib2003/HADASIM/assets/116508181/c0bb4333-5fce-424b-abb1-fa85a26f0b80)
@@ -36,3 +36,8 @@ To deploy this application, follow these steps:
 3. Set up the necessary configurations, such as database connection strings and environment variables.
 4. Deploy the published application to your hosting environment.
 5. Configure any additional services or dependencies required for the application to function correctly in the production environment.
+
+## Bonus
+Presentation of a summary view on the subject of the Corona virus:
+● How many active patients were there each day in the last month.
+● Distribution of members according to the amount of vaccinations they received.
