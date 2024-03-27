@@ -1,0 +1,46 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Vaccination Summary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Vaccination Summary</h1>
+
+<canvas id="myChart" width="800" height="400"></canvas>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Unvaccinated', 'Vaccinated1', 'Vaccinated2', 'Vaccinated3', 'Vaccinated4'],
+                datasets: [{
+                    label: 'Vaccination Summary',
+                    data: [@Model.Unvaccinated, @Model.Vaccinated1, @Model.Vaccinated2, @Model.Vaccinated3, @Model.Vaccinated4],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 1
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+}

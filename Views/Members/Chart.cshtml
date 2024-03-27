@@ -1,0 +1,52 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Chart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Active sick every day in the last month</h1>
+
+<canvas id="myChart" width="800" height="400"></canvas>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var dates = [];
+        var counts = [];
+        var data = @Html.Raw(Json.Serialize(Model));
+
+        data.forEach(function (item) {
+            var dateObj = new Date(item.date);
+            var formattedDate = dateObj.getDate() + "/" + (dateObj.getMonth() + 1) + "/" + dateObj.getFullYear();
+            dates.push(formattedDate);
+            counts.push(Math.floor(item.count));
+        });
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: 'Active Cases',
+                    data: counts,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 1,
+                            precision: 0
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+}

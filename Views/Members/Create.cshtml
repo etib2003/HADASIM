@@ -1,0 +1,143 @@
+﻿@model Corona_System.Models.Member
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Member</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdNumber" class="control-label"></label>
+                <input asp-for="IdNumber" class="form-control" />
+                <span asp-validation-for="IdNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Street" class="control-label"></label>
+                <input asp-for="Street" class="form-control" />
+                <span asp-validation-for="Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Number" class="control-label"></label>
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" class="form-control" />
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MobilePhone" class="control-label"></label>
+                <input asp-for="MobilePhone" class="form-control" />
+                <span asp-validation-for="MobilePhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaccine1Date" class="control-label"></label>
+                <input asp-for="Vaccine1Date" class="form-control" />
+                <span asp-validation-for="Vaccine1Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaccine1Manufacturer" class="control-label"></label>
+                <select asp-for="Vaccine1Manufacturer" class="form-control">
+                    <option value="">Choose vaccine manufacturer</option>
+                    <option value="Pfizer">Pfizer</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="None">None</option>
+                </select>
+                <span asp-validation-for="Vaccine1Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaccine2Date" class="control-label"></label>
+                <input asp-for="Vaccine2Date" class="form-control" />
+                <span asp-validation-for="Vaccine2Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaccine2Manufacturer" class="control-label"></label>
+                <select asp-for="Vaccine2Manufacturer" class="form-control">
+                    <option value="">Choose vaccine manufacturer</option>
+                    <option value="Pfizer">Pfizer</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="None">None</option>
+                </select>
+                <span asp-validation-for="Vaccine2Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaccine3Date" class="control-label"></label>
+                <input asp-for="Vaccine3Date" class="form-control" />
+                <span asp-validation-for="Vaccine3Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaccine3Manufacturer" class="control-label"></label>
+                <select asp-for="Vaccine3Manufacturer" class="form-control">
+                    <option value="">Choose vaccine manufacturer</option>
+                    <option value="Pfizer">Pfizer</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="None">None</option>
+                </select>
+                <span asp-validation-for="Vaccine3Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaccine4Date" class="control-label"></label>
+                <input asp-for="Vaccine4Date" class="form-control" />
+                <span asp-validation-for="Vaccine4Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vaccine4Manufacturer" class="control-label"></label>
+                <select asp-for="Vaccine4Manufacturer" class="form-control">
+                    <option value="">Choose vaccine manufacturer</option>
+                    <option value="Pfizer">Pfizer</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="None">None</option>
+                </select>
+                <span asp-validation-for="Vaccine4Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PositiveResultDate" class="control-label"></label>
+                <input asp-for="PositiveResultDate" class="form-control" />
+                <span asp-validation-for="PositiveResultDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecoveryDate" class="control-label"></label>
+                <input asp-for="RecoveryDate" class="form-control" />
+                <span asp-validation-for="RecoveryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
